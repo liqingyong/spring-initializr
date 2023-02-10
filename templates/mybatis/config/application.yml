@@ -1,0 +1,56 @@
+spring:
+  profiles:
+    #启动配置
+    active: dev
+  cache:
+    ehcache:
+      config: ehcache.xml
+  freemarker:
+    cache: false
+    charset: UTF-8
+    allow-request-override: false
+    check-template-location: true
+    #类型
+    content-type: text/html
+    expose-request-attributes: true
+    expose-session-attributes: true
+    #文件后缀
+    suffix: .ftl
+    #路径
+    template-loader-path: classpath:/templates/
+  mvc:
+    pathmatch:
+      #匹配路径 - swagger-ui与新版本不兼容需要设置此配置
+      matching-strategy: ant_path_matcher
+  mybatis-plus:
+    configuration:
+      map-underscore-to-camel-case: true
+      auto-mapping-behavior: full
+      log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    mapper-locations: classpath*:mapper/**/*Mapper.xml
+#api文档配置
+knife4j:
+  enable: true
+  setting:
+    enableFooter: false
+    enableFooterCustom: true
+    footerCustomContent: Api开放平台
+    language: zh-CN
+  openapi:
+    #文档标题
+    title: Api开放平台
+    #文档简介
+    description: Api开放平台
+    #版本
+    version: V1.0.0
+    #作者
+    author: xxx
+#健康检查
+#访问地址 http://127.0.0.1:8080/actuator/health
+management:
+  endpoint:
+    health:
+      #probes:
+        #配置探针是否启用，默认在K8s环境中自动启用
+        #enabled: true
+      enabled: true

@@ -1,0 +1,31 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - health
+          - info
+
+server:
+  port: 8080
+  compression:
+    enabled: true
+    mime-types: application/json,text/css,text/html
+    min-response-size: 2048
+  error:
+    include-message: always
+  forward-headers-strategy: native
+
+spring:
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+  task:
+    execution:
+      thread-name-prefix: initializr-
+  web:
+    resources:
+      cache:
+        use-last-modified: false
+  profiles:
+    active: dev

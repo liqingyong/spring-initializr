@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url:
+    username: SYSDBA
+    password: SYSDBA
+    driver-class-name: com.xugu.cloudjdbc.Driver
+server:
+  port: 8080

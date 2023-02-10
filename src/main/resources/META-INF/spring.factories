@@ -1,0 +1,3 @@
+io.spring.initializr.generator.project.ProjectGenerationConfiguration=\
+  com.spring.initializr.support.ReProjectContributorConfiguration,\
+  com.spring.initializr.contributor.ReplaceProjectContributorConfiguration
