@@ -36,6 +36,6 @@ Spring Initializr
 http://127.0.0.1:18080
 ```
 ##### 3.2 根据自己的项目修改对应参数
-![配置项目信息](./images/img_1.png)
+![配置项目信息](images/img_1.png)
 ##### 3.3 选择对应ORM框架和其它工具类 - 默认生成MybatisPlus
-![配置引入插件](./images/img.png)
+![配置引入插件](images/img.png)
